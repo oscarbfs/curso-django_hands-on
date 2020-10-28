@@ -5,6 +5,11 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+flake8 = "*"
+pytest-cov = "*"
+codecov = "*"
+pytest-django = "*"
+model-mommy = "*"
 
 [packages]
 requests = "*"
