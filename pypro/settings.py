@@ -33,14 +33,14 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'pypro.base',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'collectfast',
-    'django.contrib.staticfiles',
-    'pypro.base',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Bahia'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
