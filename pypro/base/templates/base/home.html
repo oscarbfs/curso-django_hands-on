@@ -35,7 +35,7 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="jumbotron">
@@ -55,7 +55,7 @@
                         </h5>
                         <div class="card-body">
                             <img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
-                                     class="img-thumbnail" style="float:left;margin-right:15px"/>
+                                 class="img-thumbnail" style="float:left;margin-right:15px"/>
                             <p class="card-text">
                                 Ramalho é sócio e professor na <a href="www.python.pro.br">Python Pro</a> e autor do
                                 Livro Python Fluente. Foi diretor técnico
@@ -79,6 +79,29 @@
     </div>
 </div>
 
+<footer class="main-footer mt-5 pt-4 text-light">
+    <div class="container pb-4">
+        <div class="row">
+            <div class="col">
+                <h3>Entre em Contato</h3>
+                <adddress>
+                    +55 12 99741-1854
+                    <br/>
+                    <a href="mailto: ramalho@python.pro.br" class="text-light">ramalho@python.pro.br</a>
+                </adddress>
+            </div>
+        </div>
+    </div>
+    <div class="rights pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {% now 'Y' %} Python Pro. Todos direitos reservados
+                </div>
+            </div>
+        </div>
+    </div>
 
+</footer>
 </body>
 </html>
