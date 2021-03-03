@@ -38,14 +38,15 @@ AUTH_USER_MODEL = 'base.User'
 # Application definition
 
 INSTALLED_APPS = [
-    'pypro.base',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'collectfast',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'pypro.base',
+    'pypro.aperitivos',
 ]
 
 MIDDLEWARE = [
