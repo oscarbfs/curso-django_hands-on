@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Python Pro</title>
+    <title>OBFS</title>
 
     <meta name="description" content="Página do curso Python Pro">
     <meta name="author" content="Oscar Borges">
@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
+        <a class="navbar-brand" href="{% url 'base:home' %}">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,113 +35,103 @@
     </div>
 </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="jumbotron">
-                <h2>
-                    Curso de Python com Luciano Ramalho
-                </h2>
-                <h4 class="mt-4"> Entre na fila de espera </h4>
+<div class="color-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        Site de Oscar Borges
+                    </h2>
+                    <h4 class="mt-4"> Entre para a fila de espera da equipe </h4>
 
-                <form action="https://herokuapp.us1.list-manage.com/subscribe/post?u=648886250d724dc2ac19df0cd&amp;id=fc9406cc37"
-                      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                      class="form-row align-items-center" target="_blank" novalidate>
-                    <div class="form-row align-items-center">
-                        <div class="col-auto mt-2">
-                            <label class="sr-only" for="mce-EMAIL">Email</label>
-                            <input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL"
-                                   placeholder="exemplo@email.com">
+                    <form action="https://herokuapp.us1.list-manage.com/subscribe/post?u=648886250d724dc2ac19df0cd&amp;id=fc9406cc37"
+                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                          class="form-row align-items-center" target="_blank" novalidate>
+                        <div class="form-row align-items-center">
+                            <div class="col-auto mt-2">
+                                <label class="sr-only" for="mce-EMAIL">Email</label>
+                                <input type="email" value="" name="EMAIL" class="form-control required bg-dark text-light" id="mce-EMAIL"
+                                       placeholder="exemplo@email.com">
+                            </div>
+                            <div class="col-auto mt-2">
+                                <label class="sr-only" for="mce-FNAME">Primeiro nome</label>
+                                <input type="text" value="" name="FNAME" class="form-control bg-dark text-light" id="mce-FNAME"
+                                       placeholder="Seu Nome">
+                            </div>
+
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                                      name="b_648886250d724dc2ac19df0cd_fc9406cc37"
+                                                                                                      tabindex="-1"
+                                                                                                      value=""></div>
+
+                            <div class="col-auto mt-2">
+                                <input type="submit" value="Salvar" name="subscribe"
+                                       id="mc-embedded-subscribe" class="btn btn-primary bg-dark">
+                            </div>
                         </div>
-                        <div class="col-auto mt-2">
-                            <label class="sr-only" for="mce-FNAME">Primeiro nome</label>
-                            <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME"
-                                   placeholder="Seu Nome">
-                        </div>
+                    </form>
 
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                                                                                  name="b_648886250d724dc2ac19df0cd_fc9406cc37"
-                                                                                                  tabindex="-1"
-                                                                                                  value=""></div>
-
-                        <div class="col-auto mt-2">
-                            <input type="submit" value="Salvar" name="subscribe"
-                                   id="mc-embedded-subscribe" class="btn btn-primary">
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <div class="card">
-                        <h5 class="card-header">
-                            Mais detalhes sobre o instrutor
-                        </h5>
-                        <div class="card-body">
-                            <img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
-                                 class="img-thumbnail" style="float:left;margin-right:15px"/>
-                            <p class="card-text">
-                                Ramalho é sócio e professor na <a href="www.python.pro.br">Python Pro</a> e autor do
-                                Livro <a href="http://shop.oreilly.com/product/0636920032519.do" target="_blank">Python
-                                Fluente</a>. Foi diretor técnico
-                                do Brasil Online, primeiro portal da Abril S/A na Web. Liderou times para os portais IDG
-                                Now,
-                                BOL, UOL, AOL Brasil e outros, usando Python desde 1998. Como instrutor, atendeu
-                                clientes como
-                                Citibank, CPqD, Serpro, Presidência da República, Globo.com e Itaú. Palestrante em
-                                eventos
-                                internacionais como FISL, PyCon US e OSCON. Ajudou a criar a Associação Python Brasil e
-                                foi seu
-                                presidente. É membro da Python Software Foundation e fundador do Garoa Hacker Clube, o
-                                primeiro
-                                hackerspace do Brasil.
-                            </p>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card color-card">
+                            <h5 class="card-header text-light">
+                                Mais detalhes sobre o criador do site
+                            </h5>
+                            <div class="card-body">
+                                <img src="{% static 'img/Oscar_img.jpeg' %}" alt="Foto de Oscar Borges"
+                                     class="img-thumbnail" width="200" height="200" style="float:left;margin-right:15px"/>
+                                <p class="card-text text-light">Nome: Oscar Borges Faleta Santana</p>
+                                <p class="card-text text-light">Idade: 17 anos</p>
+                                <p class="card-text text-light">Formado no Ensino Médio</p>
+                                <p class="card-text text-light">Estudante do curso Python Pro, aprendendo a fazer este site</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div style="text-align:center">
-                <h3 class="mt-4 mb-3">Video Básico: Demonstração</h3>
-                <p>
-                    Video de demonstração: <a href="https://pythonprodjango-ho.herokuapp.com/aperitivos/demonstracao">Demonstração</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer class="main-footer mt-5 pt-4 text-light">
-    <div class="container pb-4">
+    <div class="container">
         <div class="row">
-            <div class="col">
-                <h3>Entre em Contato</h3>
-                <adddress>
-                    +55 12 99741-1854
-                    <br/>
-                    <a href="mailto: ramalho@python.pro.br" class="text-light">ramalho@python.pro.br</a>
-                </adddress>
+            <div class="col-md-12">
+                <div style="text-align:center">
+                    <h3 class="mt-4 mb-3">Video Básico: Demonstração</h3>
+                    <p>
+                        Video de demonstração: <a href="https://pythonprodjango-ho.herokuapp.com/aperitivos/demonstracao">Demonstração</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="rights pb-4">
-        <div class="container">
+
+    <footer class="main-footer mt-5 pt-4 text-light">
+        <div class="container pb-4">
             <div class="row">
                 <div class="col">
-                    {% now 'Y' %} Python Pro. Todos direitos reservados
+                    <h3>Entre em Contato</h3>
+                    <adddress>
+                        +55 75 99823-9838
+                        <br/>
+                        <a href="mailto: oscar.borgesfs@gmail.com" class="text-light">oscar.borgesfs@gmail.com</a>
+                    </adddress>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="rights pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        {% now 'Y' %} Oscar BFS. Todos direitos reservados
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
-</footer>
 </body>
 </html>
