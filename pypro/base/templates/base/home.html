@@ -11,7 +11,7 @@
     <meta name="description" content="Página do curso Python Pro">
     <meta name="author" content="Oscar Borges">
 
-    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon_obfs.png' %}"/>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -23,7 +23,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'base:home' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'base:home' %}" style="margin-left:25px;"><img src="{% static 'img/favicon_obfs.png' %}"
+                                                                  alt="Favicon"
+                                                                  width="50" height="50"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,12 +53,14 @@
                         <div class="form-row align-items-center">
                             <div class="col-auto mt-2">
                                 <label class="sr-only" for="mce-EMAIL">Email</label>
-                                <input type="email" value="" name="EMAIL" class="form-control required bg-dark text-light" id="mce-EMAIL"
+                                <input type="email" value="" name="EMAIL"
+                                       class="form-control required bg-dark text-light" id="mce-EMAIL"
                                        placeholder="exemplo@email.com">
                             </div>
                             <div class="col-auto mt-2">
                                 <label class="sr-only" for="mce-FNAME">Primeiro nome</label>
-                                <input type="text" value="" name="FNAME" class="form-control bg-dark text-light" id="mce-FNAME"
+                                <input type="text" value="" name="FNAME" class="form-control bg-dark text-light"
+                                       id="mce-FNAME"
                                        placeholder="Seu Nome">
                             </div>
 
@@ -78,15 +82,19 @@
                     <div class="col-md-12">
                         <div class="card color-card">
                             <h5 class="card-header text-light">
-                                Mais detalhes sobre o criador do site
+                                <font color="#ffa200">Mais detalhes sobre o criador do site</font>
                             </h5>
                             <div class="card-body">
                                 <img src="{% static 'img/Oscar_img.jpeg' %}" alt="Foto de Oscar Borges"
-                                     class="img-thumbnail" width="200" height="200" style="float:left;margin-right:15px"/>
-                                <p class="card-text text-light">Nome: Oscar Borges Faleta Santana</p>
-                                <p class="card-text text-light">Idade: 17 anos</p>
-                                <p class="card-text text-light">Formado no Ensino Médio</p>
-                                <p class="card-text text-light">Estudante do curso Python Pro, aprendendo a fazer este site</p>
+                                     width="200" height="200" style="float:left;margin-right:15px"/>
+                                <p class="card-text text-light">
+                                    <font color="#ffa200">
+                                        Nome: Oscar Borges Faleta Santana <br>
+                                        Idade: 17 anos <br>
+                                        Formado no Ensino Médio <br>
+                                        Estudante do curso Python Pro, aprendendo a fazer este site
+                                    </font>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -101,7 +109,8 @@
                 <div style="text-align:center">
                     <h3 class="mt-4 mb-3">Video Básico: Demonstração</h3>
                     <p>
-                        Video de demonstração: <a href="https://pythonprodjango-ho.herokuapp.com/aperitivos/demonstracao">Demonstração</a>
+                        Video de demonstração: <a
+                            href="https://pythonprodjango-ho.herokuapp.com/aperitivos/demonstracao">Demonstração</a>
                     </p>
                 </div>
             </div>
