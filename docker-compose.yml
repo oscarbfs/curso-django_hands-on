@@ -11,5 +11,6 @@ services:
       - LC_ALL=C.UTF-8
       - POSTGRES_PASSWORD=oscar100303
       - POSTGRES_USER=oscarbfs
+      - POSTGRES_DB=cursodjangoho
     ports:
       - 5434:5432
