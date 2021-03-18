@@ -23,9 +23,12 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="true" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="false" />
+    <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="0f729145-adca-4b71-91a2-0d085ff1bd3e">
+      <connection connection-id="2d562b6f-1099-4ae9-95ca-8169f2a0df07">
+        <schema name="main" object-types="table, view" />
+      </connection>
+      <connection connection-id="5c96ff15-93df-4c88-8ad6-63be1ad84aa7">
         <schema name="public" object-types="sequence, function, table, view" />
       </connection>
     </loaded-nodes>
@@ -34,7 +37,7 @@
     <connection id="2d562b6f-1099-4ae9-95ca-8169f2a0df07">
       <console name="db.sqlite3" type="STANDARD" schema="main" session="Main" />
     </connection>
-    <connection id="0f729145-adca-4b71-91a2-0d085ff1bd3e">
+    <connection id="5c96ff15-93df-4c88-8ad6-63be1ad84aa7">
       <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main" />
     </connection>
   </component>
@@ -43,7 +46,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="2d562b6f-1099-4ae9-95ca-8169f2a0df07" />
-    <connection id="0f729145-adca-4b71-91a2-0d085ff1bd3e" />
+    <connection id="5c96ff15-93df-4c88-8ad6-63be1ad84aa7" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="2d562b6f-1099-4ae9-95ca-8169f2a0df07" dataset="main.base_user" active-filter-id="" />
@@ -161,7 +164,7 @@
           <object-name-filters />
         </object-filters>
       </connection>
-      <connection id="0f729145-adca-4b71-91a2-0d085ff1bd3e" active="true">
+      <connection id="5c96ff15-93df-4c88-8ad6-63be1ad84aa7" active="true">
         <database>
           <name value="cursodjangoho" />
           <description value="" />
