@@ -7,9 +7,7 @@ from pypro.django_assertions import assert_contains
 
 @pytest.fixture
 def video(db):
-    v = Video(slug='demonstracao', titulo='Video Básico: Demonstração', vimeo_id='519943040')
-    v.save()
-    return v
+    return mommy.make(Video)
 
 
 @pytest.fixture
