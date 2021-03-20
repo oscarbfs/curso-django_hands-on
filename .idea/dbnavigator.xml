@@ -25,7 +25,13 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
+      <connection connection-id="2d562b6f-1099-4ae9-95ca-8169f2a0df07">
+        <schema name="main" object-types="view, table" />
+      </connection>
       <connection connection-id="5c96ff15-93df-4c88-8ad6-63be1ad84aa7">
+        <schema name="information_schema" object-types="function, view, sequence, table" />
+        <schema name="pg_catalog" object-types="function, view, sequence, table" />
+        <schema name="pg_toast" object-types="function, view, sequence, table" />
         <schema name="public" object-types="function, view, sequence, table" />
       </connection>
     </loaded-nodes>
