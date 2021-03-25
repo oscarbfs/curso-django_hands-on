@@ -39,7 +39,8 @@
                     </button>
                     <ul class="dropdown-menu color-card" aria-labelledby="dropdownMenuButton1">
                         {% for modulo in MODULOS %}
-                        <a class="dropdown-item" href="#"><font color="#ffa200">{{modulo.titulo}}</font></a>
+                        <a class="dropdown-item" href="{{modulo.get_absolute_url}}"><font color="#ffa200">
+                            {{modulo.titulo}}</font></a>
                         {% endfor %}
                     </ul>
                 </div>
