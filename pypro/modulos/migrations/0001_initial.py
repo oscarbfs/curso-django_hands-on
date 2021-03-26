@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('titulo', models.CharField(max_length=64)),
                 ('publico', models.TextField()),
                 ('descricao', models.TextField()),
+                ('slug', models.SlugField(unique=True)),
             ],
             options={
                 'ordering': ('order',),
