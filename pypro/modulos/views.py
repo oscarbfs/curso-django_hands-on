@@ -6,4 +6,4 @@ from pypro.modulos import facade
 def detalhe(request, slug):
     modulo = facade.encontrar_modulo(slug)
     videos = facade.listar_videos_de_modulo_ordenadas(modulo)
-    return render(request, 'modulos/modulo_detalhe.html', {'modulo': modulo, 'videos':videos})
+    return render(request, 'modulos/modulo_detalhe.html', {'modulo': modulo, 'videos': videos})
