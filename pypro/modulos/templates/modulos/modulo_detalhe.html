@@ -13,6 +13,12 @@
                     <dt>Descrição</dt>
                     <dd>{{modulo.descricao}}</dd>
                 </dl>
+                <h2>Vídeos</h2>
+                <ol>
+                    {% for video in videos %}
+                    <li>{{video.titulo}}</li>
+                    {% endfor %}
+                </ol>
             </div>
         </div>
     </div>
