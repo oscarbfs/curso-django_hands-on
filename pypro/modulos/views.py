@@ -10,4 +10,5 @@ def detalhe(request, slug):
 
 
 def video(request, slug):
-    pass
+    video = facade.encontrar_video(slug)
+    return render(request, 'modulos/video_detalhe.html', {'video': video})

@@ -1,6 +1,6 @@
 from typing import List
 
-from pypro.modulos.models import Modulo
+from pypro.modulos.models import Modulo, Video
 
 
 def listar_modulos_ordenados() -> List[Modulo]:
@@ -18,3 +18,7 @@ def encontrar_modulo(slug: str) -> Modulo:
 
 def listar_videos_de_modulo_ordenadas(modulo: Modulo):
     return list(modulo.video_set.order_by('order').all())
+
+
+def encontrar_video(slug):
+    return Video.objects.get(slug=slug)
