@@ -37,3 +37,8 @@ def test_publico(resp, modulo: Modulo):
 def test_videos_titulos(resp, videos_detalhe):
     for video in videos_detalhe:
         assert_contains(resp, video.titulo)
+
+
+def test_videos_links(resp, videos_detalhe):
+    for video in videos_detalhe:
+        assert_contains(resp, video.get_absolute_url())

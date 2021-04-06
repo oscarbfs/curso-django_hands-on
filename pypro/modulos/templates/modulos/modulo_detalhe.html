@@ -16,7 +16,7 @@
                 <h2>Vídeos</h2>
                 <ol>
                     {% for video in videos %}
-                    <li>{{video.titulo}}</li>
+                    <li><a href="{{ video.get_absolute_url }}"><font color="#000000">{{video.titulo}}</font></a></li>
                     {% endfor %}
                 </ol>
             </div>
