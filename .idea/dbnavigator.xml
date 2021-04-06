@@ -45,6 +45,7 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_modulo" active-filter-id="" />
+    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_aula" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
