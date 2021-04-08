@@ -3,6 +3,18 @@
 {% block title %}OBFS - Vídeo{% endblock title%}
 {% block description %}Página com vídeo de demonstração{% endblock description %}
 {% block body %}
+    <nav aria-label="breadcrumb">
+        <div class="color-card">
+            <ol class="breadcrumb" style="margin-left:40px;">
+                <li class="breadcrumb-item"><a href="#"><font color="#ffa200">Home</font></a></li>
+                <li class="breadcrumb-item"><a href="{{video.modulo.get_absolute_url}}">
+                    <font color="#ffa200">{{video.modulo.titulo}}</font></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"><font color="#ffa200">{{video.titulo}}</font>
+                </li>
+            </ol>
+        </div>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-md-12">

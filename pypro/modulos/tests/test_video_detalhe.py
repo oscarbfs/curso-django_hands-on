@@ -28,3 +28,8 @@ def test_titulo(resp, video_detalhe: Video):
 
 def test_vimeo(resp, video_detalhe: Video):
     assert_contains(resp, f'src="https://player.vimeo.com/video/{video_detalhe.vimeo_id}')
+
+
+def test_modulo_breadcrumb(resp, modulo: Modulo):
+    assert_contains(resp,
+                    f'<li class="breadcrumb-item"><a href="{video.modulo.get_absolute_url()}">{modulo.titulo}</a></li>')
