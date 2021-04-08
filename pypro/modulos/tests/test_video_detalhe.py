@@ -32,4 +32,4 @@ def test_vimeo(resp, video_detalhe: Video):
 
 def test_modulo_breadcrumb(resp, modulo: Modulo):
     assert_contains(resp,
-                    f'<li class="breadcrumb-item"><a href="{video.modulo.get_absolute_url()}">{modulo.titulo}</a></li>')
+                    f'<li class="breadcrumb-item"><a href="{modulo.get_absolute_url()}">{modulo.titulo}</a></li>')

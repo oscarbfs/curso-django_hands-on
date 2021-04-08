@@ -21,4 +21,4 @@ def listar_videos_de_modulo_ordenadas(modulo: Modulo):
 
 
 def encontrar_video(slug):
-    return Video.objects.get(slug=slug)
+    return Video.objects.select_related('modulo').get(slug=slug)
