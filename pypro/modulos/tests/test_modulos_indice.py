@@ -1,3 +1,5 @@
+from typing import List
+
 import pytest
 from django.urls import reverse
 from model_mommy import mommy
@@ -29,23 +31,26 @@ def test_indice_disponivel(resp):
     assert resp.status_code == 200
 
 
-# def test_titulo(resp, modulo: Modulo):
-#     assert_contains(resp, modulo.titulo)
-#
-#
-# def test_descricao(resp, modulo: Modulo):
-#     assert_contains(resp, modulo.descricao)
-#
-#
-# def test_publico(resp, modulo: Modulo):
-#     assert_contains(resp, modulo.publico)
-#
-#
-# def test_videos_titulos(resp, videos_detalhe):
-#     for video in videos_detalhe:
-#         assert_contains(resp, video.titulo)
-#
-#
-# def test_videos_links(resp, videos_detalhe):
-#     for video in videos_detalhe:
-#         assert_contains(resp, video.get_absolute_url())
+def test_titulo(resp, modulos: List[Modulo]):
+    for modulo in modulos:
+        assert_contains(resp, modulo.titulo)
+
+
+def test_descricao(resp, modulos: List[Modulo]):
+    for modulo in modulos:
+        assert_contains(resp, modulo.descricao)
+
+
+def test_publico(resp, modulos: List[Modulo]):
+    for modulo in modulos:
+        assert_contains(resp, modulo.publico)
+
+
+def test_videos_titulos(resp, videos_detalhe: List[Video]):
+    for video in videos_detalhe:
+        assert_contains(resp, video.titulo)
+
+
+def test_videos_urls(resp, videos_detalhe: List[Video]):
+    for video in videos_detalhe:
+        assert_contains(resp, video.get_absolute_url())
