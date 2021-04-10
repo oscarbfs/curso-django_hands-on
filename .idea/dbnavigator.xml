@@ -24,11 +24,26 @@
     <autoscroll-to-editor value="true" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
+        <schema name="information_schema" object-types="table, function, view" />
+        <schema name="pg_catalog" object-types="table, function, view" />
+        <schema name="public" object-types="index, sequence, constraint, table, function, dataset trigger, view, column" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
-      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main"><![CDATA[SELECT m.id, m.titulo, a.id, a.titulo, a.modulo_id FROM public.modulos_modulo AS m JOIN public.modulos_aula a on m.id = a.modulo_id where m.id=1;]]></console>
+      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select 
+    canal.id,
+    canal.nome,
+    inscricoes.*,
+    base_user.id,
+    base_user.email
+FROM 
+    public.canais_canal AS canal
+INNER JOIN public.canais_canal_inscricoes AS inscricoes on canal.id = inscricoes.canal_id
+INNER JOIN public.base_user on inscricoes.user_id = base_user.id]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -40,6 +55,8 @@
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_modulo" active-filter-id="" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_aula" active-filter-id="" />
+    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.canais_canal_inscricoes" active-filter-id="" />
+    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.base_user" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
