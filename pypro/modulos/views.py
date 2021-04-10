@@ -15,5 +15,5 @@ def video(request, slug):
 
 
 def indice(request):
-    ctx = {'modulos': facade.listar_modulos_com_aulas()}
+    ctx = {'modulos': facade.listar_modulos_com_videos()}
     return render(request, 'modulos/indice.html', ctx)
