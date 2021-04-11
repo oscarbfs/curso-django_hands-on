@@ -7,4 +7,10 @@ class Canal(models.Model):
     slug = models.SlugField(max_length=64)
     inicio = models.DateField()
     fim = models.DateField()
-    inscricoes = models.ManyToManyField(get_user_model())
+    usuarios = models.ManyToManyField(get_user_model(), through='Inscricao')
+
+
+class Inscricao(models.Model):
+    data = models.DateTimeField(auto_now_add=True)
+    usuario = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    canais = models.ForeignKey(Canal, on_delete=models.CASCADE)
