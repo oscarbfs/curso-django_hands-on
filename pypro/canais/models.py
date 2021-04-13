@@ -13,4 +13,8 @@ class Canal(models.Model):
 class Inscricao(models.Model):
     data = models.DateTimeField(auto_now_add=True)
     usuario = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    canais = models.ForeignKey(Canal, on_delete=models.CASCADE)
+    canal = models.ForeignKey(Canal, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = [['usuario', 'canal']]
+        ordering = ['canal', 'data']

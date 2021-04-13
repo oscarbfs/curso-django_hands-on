@@ -26,8 +26,9 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
-        <schema name="pg_catalog" object-types="function" />
-        <schema name="public" object-types="table, column, sequence, dataset trigger, view, index, function, constraint" />
+        <schema name="information_schema" object-types="view, function, table" />
+        <schema name="pg_catalog" object-types="view, function, table" />
+        <schema name="public" object-types="sequence, index, column, view, function, table, dataset trigger, constraint" />
       </connection>
     </loaded-nodes>
   </component>
@@ -61,6 +62,8 @@ INNER JOIN public.base_user on inscricoes.user_id = base_user.id]]></console>
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_aula" active-filter-id="" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.canais_canal_inscricoes" active-filter-id="" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.base_user" active-filter-id="" />
+    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.django_admin_log" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.canais_canal" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.django_migrations" active-filter-id="EMPTY_FILTER">
       <filter id="ecb7a1d2-d1a8-4b82-b6d8-16a9aa40f5ff" name="1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="1" active="true" />
