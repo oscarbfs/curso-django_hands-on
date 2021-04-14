@@ -45,7 +45,11 @@
                     </ul>
                 </div>
             </ul>
-            <a class="btn btn-warning ms-auto" href="{% url 'login' %}">Entrar</a>
+        {% if user.is_authenticated %}
+
+        {% else %}
+        <a class="btn btn-warning ms-auto" href="{% url 'login' %}">Entrar</a>
+        {% endif %}
         </div>
     </div>
 </nav>
