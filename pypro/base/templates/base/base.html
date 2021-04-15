@@ -33,20 +33,29 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <div class="dropdown" style="margin-left:10px;">
-                    <button class="btn btn-secondary dropdown-toggle color-card" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false"><font color="#ffa200">Modulos</font>
-                    </button>
-                    <ul class="dropdown-menu color-card" aria-labelledby="dropdownMenuButton1">
+                <li class="dropdown" style="margin-left:10px;">
+                    <a class="btn btn-secondary dropdown-toggle color-card" type="button" id="dropdownMenuButton1"
+                       data-bs-toggle="dropdown" aria-expanded="false"><font color="#ffa200">Modulos</font>
+                    </a>
+                    <div class="dropdown-menu color-card" aria-labelledby="dropdownMenuButton1">
                         {% for modulo in MODULOS %}
                         <a class="dropdown-item" href="{{modulo.get_absolute_url}}"><font color="#ffa200">
                             {{modulo.titulo}}</font></a>
                         {% endfor %}
-                    </ul>
-                </div>
+                    </div>
+                </li>
             </ul>
         {% if user.is_authenticated %}
-
+            <ul class="navbar-nav ms-auto">
+                <li class="dropdown" style="margin-left:10px;">
+                    <a class="btn btn-secondary dropdown-toggle color-card" type="button" id="dropdownMenuButton1"
+                       data-bs-toggle="dropdown" aria-expanded="false"><font color="#ffa200">{{user.first_name}}</font>
+                    </a>
+                    <div class="dropdown-menu color-card" aria-labelledby="dropdownMenuButton1">
+                        <button type="button" class="dropdown-item" ><font color="#ffa200">Sair</font></button>
+                    </div>
+                </li>
+            </ul>
         {% else %}
         <a class="btn btn-warning ms-auto" href="{% url 'login' %}">Entrar</a>
         {% endif %}
