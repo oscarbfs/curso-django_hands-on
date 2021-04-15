@@ -24,11 +24,17 @@
     <autoscroll-to-editor value="true" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
+        <schema name="information_schema" object-types="view, table, function" />
+        <schema name="pg_catalog" object-types="view, table, function" />
+        <schema name="public" object-types="constraint, view, index, table, column, dataset trigger, sequence, function" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
-      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select 
+      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main">select 
     canal.id,
     canal.nome,
     inscricoes.*,
@@ -37,21 +43,19 @@
 FROM 
     public.canais_canal AS canal
 INNER JOIN public.canais_canal_inscricoes AS inscricoes on canal.id = inscricoes.canal_id
-INNER JOIN public.base_user on inscricoes.user_id = base_user.id]]></console>
+INNER JOIN public.base_user on inscricoes.user_id = base_user.id</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" object-ref="schemas/public/tables/canais_inscricao" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.canais_inscricao" active-filter-id="EMPTY_FILTER">
-      <filter id="bfb3ddba-f2ec-41d5-84f4-528ec29ba7f2" name="1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="1" active="true" />
-      </filter>
-    </filter-actions>
+    <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.canais_inscricao" active-filter-id="" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_modulo" active-filter-id="" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.modulos_aula" active-filter-id="" />
     <filter-actions connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca" dataset="public.canais_canal_inscricoes" active-filter-id="" />
