@@ -52,7 +52,9 @@
                        data-bs-toggle="dropdown" aria-expanded="false"><font color="#ffa200">{{user.first_name}}</font>
                     </a>
                     <div class="dropdown-menu color-card" aria-labelledby="dropdownMenuButton1">
-                        <button type="button" class="dropdown-item" ><font color="#ffa200">Sair</font></button>
+                        <div class="dropdown-item">
+                            <a class="btn btn-danger" href="{% url 'logout' %}">Sair</a>
+                        </div>
                     </div>
                 </li>
             </ul>
