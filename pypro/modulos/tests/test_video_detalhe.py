@@ -17,8 +17,8 @@ def video_detalhe(modulo):
 
 
 @pytest.fixture
-def resp(client, video_detalhe):
-    resp = client.get(reverse('modulos:video', kwargs={'slug': video_detalhe.slug}))
+def resp(client_com_usuario_logado, video_detalhe):
+    resp = client_com_usuario_logado.get(reverse('modulos:video', kwargs={'slug': video_detalhe.slug}))
     return resp
 
 
@@ -33,3 +33,14 @@ def test_vimeo(resp, video_detalhe: Video):
 def test_modulo_breadcrumb(resp, modulo: Modulo):
     assert_contains(resp,
                     f'<a href="{modulo.get_absolute_url()}"><font color="#ffa200">{modulo.titulo}</font></a>')
+
+
+@pytest.fixture
+def resp_sem_usuario(client, video_detalhe):
+    resp = client.get(reverse('modulos:video', kwargs={'slug': video_detalhe.slug}))
+    return resp
+
+
+def test_usuario_nao_logado_redirect(resp_sem_usuario):
+    assert resp_sem_usuario.status_code == 302
+    assert resp_sem_usuario.url.startswith(reverse('login'))
