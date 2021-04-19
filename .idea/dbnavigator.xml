@@ -26,15 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
-        <schema name="information_schema" object-types="function, table, view" />
-        <schema name="pg_catalog" object-types="function" />
-        <schema name="public" object-types="function, table, sequence, constraint, view, column, dataset trigger, index" />
+        <schema name="public" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
-      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select
+      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main">select
     canal.id,
     canal.nome,
     inscricoes.*,
@@ -43,7 +41,7 @@
 FROM
     public.canais_canal AS canal
 INNER JOIN public.canais_inscricao AS inscricoes on canal.id = inscricoes.canal_id
-INNER JOIN public.base_user on inscricoes.usuario_id = base_user.id]]></console>
+INNER JOIN public.base_user on inscricoes.usuario_id = base_user.id</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

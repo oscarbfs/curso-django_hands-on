@@ -47,11 +47,11 @@
             </ul>
         {% if user.is_authenticated %}
             <ul class="navbar-nav ms-auto">
-                <li class="dropdown" style="margin-left:10px;">
+                <li class="nav-item dropdown">
                     <a class="btn btn-secondary dropdown-toggle color-card" type="button" id="dropdownMenuButton1"
                        data-bs-toggle="dropdown" aria-expanded="false"><font color="#ffa200">{{user.first_name}}</font>
                     </a>
-                    <div class="dropdown-menu color-card" aria-labelledby="dropdownMenuButton1">
+                    <div class="dropdown-menu dropdown-menu-end color-card" aria-labelledby="dropdownMenuButton">
                         <div class="dropdown-item">
                             <a class="btn btn-danger" href="{% url 'logout' %}">Sair</a>
                         </div>
