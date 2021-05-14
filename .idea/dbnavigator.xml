@@ -26,13 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="5cf2aca3-547c-41e6-8bda-ec19aed755cf">
-        <schema name="public" object-types="column, sequence, view, function, constraint, table, index, dataset trigger" />
+        <schema name="public" object-types="constraint, sequence, index, function, view, table, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d22b9ca5-ccfe-4ec6-9cd3-2cba7e786dca">
-      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select
+      <console name="cursodjangoho" type="STANDARD" schema="information_schema" session="Main">select
     canal.id,
     canal.nome,
     inscricoes.*,
@@ -41,10 +41,10 @@
 FROM
     public.canais_canal AS canal
 INNER JOIN public.canais_inscricao AS inscricoes on canal.id = inscricoes.canal_id
-INNER JOIN public.base_user on inscricoes.usuario_id = base_user.id]]></console>
+INNER JOIN public.base_user on inscricoes.usuario_id = base_user.id</console>
     </connection>
     <connection id="5cf2aca3-547c-41e6-8bda-ec19aed755cf">
-      <console name="Connection" type="STANDARD" schema="information_schema" session="Main"><![CDATA[ALTER TABLE public.canais_inscricao RENAME canais_id TO canal_id;]]></console>
+      <console name="Connection" type="STANDARD" schema="information_schema" session="Main">ALTER TABLE public.canais_inscricao RENAME canais_id TO canal_id;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
